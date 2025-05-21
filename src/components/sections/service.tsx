@@ -24,7 +24,7 @@ export function Service() {
                 )}
               >
                 <div className="flex-1 flex flex-col justify-center">
-                  <h3 className="font-bold text-2xl mb-5">{title}</h3>
+                  <p className="font-bold text-2xl mb-5">{title}</p>
                   <p>{description}</p>
                 </div>
                 <div className="hidden sm:block sm:w-1/2 rounded-xl aspect-video relative overflow-hidden">
@@ -32,6 +32,7 @@ export function Service() {
                     src={image}
                     alt={title}
                     className="object-cover"
+                    loading="lazy"
                     fill
                   />
                 </div>

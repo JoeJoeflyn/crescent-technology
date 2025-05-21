@@ -66,10 +66,11 @@ export function StickyScrollReveal(): React.JSX.Element {
                 >
                   <Image
                     src={img.src}
-                    alt=""
+                    alt={img.id.toString()}
                     className="transition-all duration-300 w-80 h-96 align-bottom object-cover"
                     width={320}
                     height={384}
+                    loading="lazy"
                   />
                 </figure>
               ))}
@@ -92,10 +93,11 @@ export function StickyScrollReveal(): React.JSX.Element {
                   >
                     <Image
                       src={img.src}
-                      alt=""
+                      alt={img.id.toString()}
                       className="transition-all duration-300 w-96 h-96 align-bottom object-cover rounded-md"
                       width={384}
                       height={384}
+                      loading="lazy"
                     />
                   </motion.div>
                 </figure>

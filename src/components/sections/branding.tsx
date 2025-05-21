@@ -51,6 +51,7 @@ export function Branding() {
                 width={500}
                 height={500}
                 className="h-32 w-auto object-cover"
+                loading="lazy"
               />
             </div>
           ))}
@@ -81,6 +82,7 @@ export function Branding() {
                 width={500}
                 height={500}
                 className="h-32 w-auto object-cover"
+                loading="lazy"
               />
             </div>
           ))}
@@ -111,6 +113,7 @@ export function Branding() {
                 width={500}
                 height={500}
                 className="h-32 w-auto object-cover"
+                loading="lazy"
               />
             </div>
           ))}
