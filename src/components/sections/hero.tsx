@@ -1,7 +1,7 @@
 import { HERO_DESCRIPTION, HERO_TITLE, HERO_WORDS } from "@/constants";
-import { TextGenerateEffect } from "./animations/text-generate-effect";
-import { TypewriterEffectSmooth } from "./animations/typewriter-effect";
-import { WavyBackground } from "./animations/wavy-background";
+import { TextGenerateEffect } from "../animations/text-generate-effect";
+import { TypewriterEffectSmooth } from "../animations/typewriter-effect";
+import { WavyBackground } from "../animations/wavy-background";
 
 export function Hero() {
   return (

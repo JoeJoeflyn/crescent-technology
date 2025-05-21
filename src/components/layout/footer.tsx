@@ -1,5 +1,6 @@
 "use client";
-import { NAV_ITEMS, SOCIAL_LINKS } from "@/constants";
+import { LOGO, NAV_ITEMS, SOCIAL_LINKS } from "@/constants";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -8,22 +9,28 @@ const Footer = () => {
 
   return (
     <div
-      className="relative h-full py-20 mt-32 sm:mt-0 sm:pt-14 bg-[#f7f7f7] text-black"
+      className="relative h-full py-16 bg-primary text-white"
       ref={container}
     >
       <div className="mx-auto w-full max-w-7xl px-4 flex flex-col gap-10">
-        <div className="md:flex justify-between w-full">
+        <div className="flex md:flex-row flex-col justify-between gap-4 w-full">
           <div>
             <h1 className="md:text-4xl text-2xl font-semibold">
               Let&lsquo;s do great work together
             </h1>
-            <div className="pt-2 pb-6 md:w-99">
-              <p className="md:text-2xl text-xl py-4">Logo here</p>
+            <div className="flex flex-col gap-4 pt-4">
+              <Image
+                src={LOGO.TRANSPARENT}
+                alt="logo"
+                width={200}
+                height={200}
+              />
+              <Image src="/usa.svg" alt="logo" width={200} height={200} />
             </div>
           </div>
           <div className="flex gap-10">
             <ul>
-              <li className="text-2xl pb-2 text-black font-semibold">
+              <li className="text-2xl pb-2 text-cyan-blue font-semibold">
                 SITEMAP
               </li>
               {NAV_ITEMS.map((link, index) => (
@@ -33,7 +40,9 @@ const Footer = () => {
               ))}
             </ul>
             <ul>
-              <li className="text-2xl pb-2 text-black font-semibold">SOCIAL</li>
+              <li className="text-2xl pb-2 text-cyan-blue font-semibold">
+                SOCIAL
+              </li>
               {SOCIAL_LINKS.map((social, index) => (
                 <li key={index} className="text-xl font-medium">
                   <a

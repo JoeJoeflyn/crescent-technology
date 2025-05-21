@@ -7,9 +7,10 @@ import {
   Navbar,
   NavbarLogo,
   NavBody,
-  NavItems
+  NavItems,
 } from "@/components/ui/resizable-navbar";
 import { NAV_ITEMS } from "@/constants";
+import Link from "next/link";
 import { useState } from "react";
 
 export function NavbarComponent() {
@@ -20,8 +21,7 @@ export function NavbarComponent() {
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
-          {/* <NavbarLogo /> */}
-          Logo
+          <NavbarLogo />
           <NavItems items={NAV_ITEMS} />
         </NavBody>
 
@@ -40,14 +40,14 @@ export function NavbarComponent() {
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {NAV_ITEMS.map((item, idx) => (
-              <a
+              <Link
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-cyan-blue"
               >
                 <span className="block">{item.name}</span>
-              </a>
+              </Link>
             ))}
           </MobileNavMenu>
         </MobileNav>
