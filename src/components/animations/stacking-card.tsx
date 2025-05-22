@@ -32,7 +32,7 @@ interface StackingCardItemProps
   topPosition?: string
 }
 
-export default function StackingCards({
+export function StackingCards({
   children,
   className,
   scrollOptons,

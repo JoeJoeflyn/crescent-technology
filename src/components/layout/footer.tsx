@@ -19,12 +19,14 @@ const Footer = () => {
               Let&lsquo;s do great work together
             </h1>
             <div className="flex flex-col gap-4 pt-4">
-              <Image
-                src={LOGO.TRANSPARENT}
-                alt="logo"
-                width={200}
-                height={200}
-              />
+              <Link href="/">
+                <Image
+                  src={LOGO.TRANSPARENT}
+                  alt="logo"
+                  width={200}
+                  height={200}
+                />
+              </Link>
               <Image src="/usa.svg" alt="logo" width={200} height={200} />
             </div>
           </div>
@@ -45,14 +47,14 @@ const Footer = () => {
               </li>
               {SOCIAL_LINKS.map((social, index) => (
                 <li key={index} className="text-xl font-medium">
-                  <a
+                  <Link
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline"
                   >
                     {social.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -63,9 +65,9 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Crescent Technology. All Rights
             Reserved.
           </span>
-          <a href="#" className="font-semibold">
+          <Link href="#" className="font-semibold">
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     </div>

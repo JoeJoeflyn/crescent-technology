@@ -1,46 +1,41 @@
 "use client";
-import dynamic from 'next/dynamic';
 import { CONTACT_INFO } from "@/constants";
 import { cn } from "@/lib/utils";
 import { IconMapPin } from "@tabler/icons-react";
-import { useMemo } from 'react';
+import dynamic from "next/dynamic";
 
 // Lazy load the WorldMap component
 const WorldMap = dynamic(
-  () => import('@/components/animations/world-map').then((mod) => mod.WorldMap),
+  () => import("@/components/animations/world-map").then((mod) => mod.WorldMap),
   {
     ssr: false,
-    loading: () => (
-      <div className="w-full aspect-[2/1] bg-gray-100 dark:bg-gray-800 rounded-lg animate-pulse" />
-    )
   }
 );
 
-export function Contact() {
-  // Memoize the dots array to prevent unnecessary recalculations
-  const mapDots = useMemo(() => [
-    {
-      start: { lat: 24.7136, lng: 46.6753, label: "Riyadh, KSA" },
-      end: { lat: 24.5247, lng: 39.5692, label: "Madinah, KSA" },
-    },
-    {
-      start: { lat: 24.7136, lng: 46.6753, label: "Riyadh, KSA" },
-      end: { lat: 17.385, lng: 78.4867, label: "Hyderabad, India" },
-    },
-    {
-      start: { lat: 17.385, lng: 78.4867, label: "Hyderabad, India" },
-      end: { lat: 25.2048, lng: 55.2708, label: "Dubai, UAE" },
-    },
-    {
-      start: { lat: 25.2048, lng: 55.2708, label: "Dubai, UAE" },
-      end: { lat: 33.749, lng: -84.388, label: "Atlanta, GA, USA" },
-    },
-    {
-      start: { lat: 24.5247, lng: 39.5692, label: "Madinah, KSA" },
-      end: { lat: 33.749, lng: -84.388, label: "Atlanta, GA, USA" },
-    },
-  ], []);
+const mapDots = [
+  {
+    start: { lat: 24.7136, lng: 46.6753, label: "Riyadh, KSA" },
+    end: { lat: 24.5247, lng: 39.5692, label: "Madinah, KSA" },
+  },
+  {
+    start: { lat: 24.7136, lng: 46.6753, label: "Riyadh, KSA" },
+    end: { lat: 17.385, lng: 78.4867, label: "Hyderabad, India" },
+  },
+  {
+    start: { lat: 17.385, lng: 78.4867, label: "Hyderabad, India" },
+    end: { lat: 25.2048, lng: 55.2708, label: "Dubai, UAE" },
+  },
+  {
+    start: { lat: 25.2048, lng: 55.2708, label: "Dubai, UAE" },
+    end: { lat: 33.749, lng: -84.388, label: "Atlanta, GA, USA" },
+  },
+  {
+    start: { lat: 24.5247, lng: 39.5692, label: "Madinah, KSA" },
+    end: { lat: 33.749, lng: -84.388, label: "Atlanta, GA, USA" },
+  },
+];
 
+export function Contact() {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-2">
       <p className="text-center text-4xl sm:text-5xl md:text-6xl text-primary font-semibold mb-12">

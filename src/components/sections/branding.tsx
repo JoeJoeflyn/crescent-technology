@@ -50,8 +50,9 @@ export function Branding() {
                 alt={`Image ${i + 1}`}
                 width={500}
                 height={500}
-                className="h-32 w-auto object-cover"
+                className="h-10 md:h-32 w-auto object-cover"
                 loading="lazy"
+                quality={75}
               />
             </div>
           ))}
@@ -81,8 +82,9 @@ export function Branding() {
                 alt={`Image ${i + firstRow.length}`}
                 width={500}
                 height={500}
-                className="h-32 w-auto object-cover"
+                className="h-10 md:h-32 w-auto object-cover"
                 loading="lazy"
+                quality={75}
               />
             </div>
           ))}
@@ -112,8 +114,9 @@ export function Branding() {
                 alt={`Image ${i + firstRow.length + secondRow.length}`}
                 width={500}
                 height={500}
-                className="h-32 w-auto object-cover"
+                className="h-10 md:h-32 w-auto object-cover"
                 loading="lazy"
+                quality={75}
               />
             </div>
           ))}

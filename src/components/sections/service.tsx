@@ -3,7 +3,7 @@
 import { CARDS } from "@/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import StackingCards, { StackingCardItem } from "../animations/stacking-card";
+import { StackingCards, StackingCardItem } from "../animations/stacking-card";
 
 export function Service() {
   return (
@@ -20,7 +20,7 @@ export function Service() {
               <div
                 className={cn(
                   bgColor,
-                  "h-full flex-col sm:flex-row px-8 py-10 flex w-11/12 rounded-3xl mx-auto relative"
+                  "h-full flex-col sm:flex-row px-8 py-10 flex w-full rounded-3xl relative"
                 )}
               >
                 <div className="flex-1 flex flex-col justify-center">
@@ -34,6 +34,7 @@ export function Service() {
                     className="object-cover"
                     loading="lazy"
                     fill
+                    quality={75}
                   />
                 </div>
               </div>
