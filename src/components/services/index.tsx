@@ -79,16 +79,16 @@ export default function Service() {
         {services.map((service) => (
           <div
             key={service.id}
-            className={`grid md:grid-cols-2 gap-8 items-center ${
-              service.reverse
-                ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
-                : ""
-            }`}
+            className={cn("grid md:grid-cols-2 gap-8 items-center", {
+              "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1":
+                service.reverse,
+            })}
           >
             <div
-              className={`flex ${
-                service.reverse ? "justify-start" : "justify-end"
-              } items-center`}
+              className={cn("flex", {
+                "justify-start": !service.reverse,
+                "justify-end": service.reverse,
+              })}
             >
               <div
                 className={cn("rounded-lg", {
@@ -105,7 +105,11 @@ export default function Service() {
                 />
               </div>
             </div>
-            <div className={`space-y-4 ${service.reverse ? "text-right" : ""}`}>
+            <div
+              className={cn("space-y-4", {
+                "text-right": service.reverse,
+              })}
+            >
               <h2 className="text-2xl font-bold text-primary">
                 {service.title}
               </h2>

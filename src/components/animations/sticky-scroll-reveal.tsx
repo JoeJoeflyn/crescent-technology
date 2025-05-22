@@ -48,12 +48,12 @@ export function StickyScrollReveal(): React.JSX.Element {
 
       <section className="text-primary w-full relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="sticky top-0 h-screen grid place-content-center">
+          <div className="sticky top-0 h-screen grid place-content-center z-20">
             <motion.h1
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="text-2xl md:text-4xl px-8 font-medium text-right tracking-tight leading-[120%]"
+              className="text-2xl md:text-4xl px-8 py-4 font-medium text-left tracking-tight leading-[120%] text-white md:text-inherit mx-14 md:mx-0 bg-black/50 backdrop-blur-sm md:bg-transparent md:backdrop-blur-none rounded"
             >
               Experts in IoT, AI, analytics, and cloud—76+ clients over 15
               years, with offices in the USA, KSA, and India.
