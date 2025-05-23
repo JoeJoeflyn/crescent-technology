@@ -1,5 +1,5 @@
 "use client";
-import { LOGO, NAV_ITEMS, SOCIAL_LINKS } from "@/constants";
+import { NAV_ITEMS, SOCIAL_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
@@ -19,15 +19,8 @@ const Footer = () => {
               Let&lsquo;s do great work together
             </h1>
             <div className="flex flex-col gap-4 pt-4">
-              <Link href="/">
-                <Image
-                  src={LOGO.TRANSPARENT}
-                  alt="logo"
-                  width={200}
-                  height={200}
-                />
-              </Link>
               <Image src="/usa.svg" alt="logo" width={200} height={200} />
+              <Image src="/KSA.svg" alt="logo" width={200} height={200} />
             </div>
           </div>
           <div className="flex gap-10">

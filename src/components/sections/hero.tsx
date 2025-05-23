@@ -1,15 +1,16 @@
 import { HERO_TITLE, HERO_WORDS } from "@/constants";
+import { BackgroundBeams } from "../animations/background-beams";
 import { TextGenerateEffect } from "../animations/text-generate-effect";
 import { TypewriterEffectSmooth } from "../animations/typewriter-effect";
-import { WavyBackground } from "../animations/wavy-background";
 
 export function Hero() {
   return (
-    <WavyBackground className="mx-auto w-full max-w-7xl px-4 py-2">
-      <div className="pb-10 md:pb-20 lg:pb-40">
+    <div className="h-[30rem] md:h-screen w-full bg-[#002240] relative flex flex-col items-center justify-center">
+      <div className="mx-auto p-4">
         <TypewriterEffectSmooth words={HERO_TITLE} />
         <TextGenerateEffect words={HERO_WORDS} />
       </div>
-    </WavyBackground>
+      <BackgroundBeams />
+    </div>
   );
 }

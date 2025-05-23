@@ -6,8 +6,8 @@ import { Service } from "@/components/sections/service";
 export default function Home() {
   return (
     <main>
-      <Content />
       <Branding />
+      <Content />
       <Service />
       <Contact />
     </main>

@@ -2,7 +2,7 @@
 import { CONTACT_INFO } from "@/constants";
 import { cn } from "@/lib/utils";
 import { IconMapPin } from "@tabler/icons-react";
-import { motion, useInView } from "motion/react";
+import { useInView } from "motion/react";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 
@@ -89,7 +89,10 @@ const sampleArcs = [
 export function ContactComponent() {
   const [isMounted, setIsMounted] = useState(false);
   const globeRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(globeRef, { once: true, margin: "0px 0px -50% 0px" });
+  const isInView = useInView(globeRef, {
+    once: true,
+    margin: "0px 0px -50% 0px",
+  });
 
   useEffect(() => {
     setIsMounted(true);
@@ -98,20 +101,15 @@ export function ContactComponent() {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center justify-center py-12 md:py-20 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="w-full text-center mb-8 md:mb-12"
-        >
+        <div className="w-full mb-8 md:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
             Contact Us
           </h2>
-          <p className="text-base sm:text-lg md:text-xl font-medium text-primary mt-4 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl font-medium text-primary mt-4 max-w-2xl">
             &quot;Our offices are strategically located to serve our clients
             globally&quot;
           </p>
-        </motion.div>
+        </div>
 
         <div
           ref={globeRef}

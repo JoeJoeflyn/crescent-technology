@@ -32,7 +32,16 @@ export default function Projects() {
   );
 
   return (
-    <div className="p-4 my-15">
+    <div className="w-full max-w-7xl mx-auto px-4 py-16 sm:py-24 lg:py-32">
+      <div className="flex flex-col gap-6 mb-12">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl text-primary font-semibold">
+          LDS Project List
+        </h1>
+        <p className="text-xl text-primary max-w-5xl">
+          The following projects are currently in progress or have been
+          completed.
+        </p>
+      </div>
       {/* Table */}
       <div className="overflow-x-auto shadow-lg">
         <table className="min-w-full bg-white border border-gray-300">

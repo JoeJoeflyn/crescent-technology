@@ -86,8 +86,8 @@ export default function Service() {
           >
             <div
               className={cn("flex", {
-                "justify-start": !service.reverse,
-                "justify-end": service.reverse,
+                "justify-start": service.reverse,
+                "justify-end": !service.reverse,
               })}
             >
               <div

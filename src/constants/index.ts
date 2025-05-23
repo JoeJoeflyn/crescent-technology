@@ -1,3 +1,5 @@
+import { IconApi, IconBrain, IconBuildingMosque, IconBulb, IconChartBar, IconChartLine, IconCode, IconCpu, IconDatabase, IconHome, IconLeaf, IconPhone, IconPlug, IconRobot, IconServer, IconSettingsAutomation, IconShoppingCart, IconWifi } from "@tabler/icons-react";
+
 export const NAV_ITEMS = [
   {
     name: "About",
@@ -8,12 +10,12 @@ export const NAV_ITEMS = [
     link: "/services",
   },
   {
-    name: "IOT",
-    link: "/iot",
-  },
-  {
     name: "Projects",
     link: "/projects",
+  },
+  {
+    name: "IOT",
+    link: "/iot",
   },
   {
     name: "⁠AI and ML",
@@ -29,7 +31,7 @@ export const NAV_ITEMS = [
   },
   {
     name: "⁠Digital Transformation",
-    link: "/digital-transformation",
+    link: "/dt",
   },
   {
     name: "Contact",
@@ -49,55 +51,55 @@ export const HERO_TITLE = [
   },
   {
     text: "AI",
-    className: "text-cyan-blue dark:text-cyan-blue",
+    className: "text-white",
   },
 ];
 
 export const CARDS = [
   {
-    bgColor: "bg-primary",
+    bgColor: "bg-gray-800",
     title: "AI/ IOT Custom Development",
     description:
       "Embedding machine learning, IoT, and automation into physical infrastructure, we enable digital transformation that is both scalable and locally relevant. Our team delivers custom-built systems with a focus on low-cost deployment, real-time analytics, and adaptive intelligence tailored to client needs.",
     image: "/IOT.png",
   },
   {
-    bgColor: "bg-cyan-blue",
+    bgColor: "bg-gray-900",
     title: "Artificial Intelligence - Generative AI",
     description:
       "Enhance AI capabilities with solutions in computer vision, object recognition, and generative AI, automating content generation and driving efficiencies across industries.",
     image: "/AI.png",
   },
   {
-    bgColor: "bg-royal-blue",
+    bgColor: "bg-primary",
     title: "Data Analytics - Insights",
     description:
       "Unlock the potential of your data with advanced analytics solutions. We integrate multiple data sources, transforming data into actionable insights using tools like Power BI, Oracle Analytics Cloud, and AWS Quick sight.",
     image: "/Analytics.png",
   },
   {
-    bgColor: "bg-cyan-blue",
+    bgColor: "bg-slate-800",
     title: "IT Strategy & Consulting",
     description:
       "Streamline your business operations with our specialized cybersecurity, IT, and business process consulting. We ensure a smooth transition that minimizes downtime and maximizes efficiency.",
     image: "/consulting.png",
   },
   {
-    bgColor: "bg-royal-blue",
+    bgColor: "bg-blue-950",
     title: "Cloud Migration & Modernization",
     description:
       "Specializing in AWS migration, we provide expert guidance through the complexities of moving applications, databases, and entire IT infrastructures to leading cloud platforms like AWS, Azure, GCP, and Oracle Cloud, ensuring smooth, secure, and scalable transitions.",
     image: "/cloud.png",
   },
   {
-    bgColor: "bg-primary",
+    bgColor: "bg-neutral-900",
     title: "Machine Learning & Predictive Analytics",
     description:
       "Explore machine learning and predictive analytics, leveraging your data to build models that forecast trends and automate decision-making processes.",
     image: "/machine.png",
   },
   {
-    bgColor: "bg-cyan-blue",
+    bgColor: "bg-gray-900",
     title: "Custom Application & Mobile App Development",
     description:
       "Delivering tailored software solutions, we focus on custom application and mobile app development for iOS and Android, ensuring superb user experience and performance.",
@@ -176,7 +178,7 @@ export const CONTACT_INFO = [
   },
 ];
 
-export const LOGO = { DEFAULT: "/logo-2.png", TRANSPARENT: "/logo-1.jpg", BIG: "/logo-3.png" };
+export const LOGO = { DEFAULT: "/logo-2.png", TRANSPARENT: "/logo-1.jpg", BIG: "/logo-3.png", LOGO_4: "/logo-4.png" };
 
 export const HERO_WORDS = "Your Trusted AI Partners";
 
@@ -203,6 +205,159 @@ export const BRAND_LOGOS = [
   "/kiewit.webp",
   "/scotts.webp",
   "/Avanos.webp",
+];
+
+export const IOT = [
+  {
+    title: "Mosques Automation System",
+    description:
+      "A comprehensive smart system developed to modernize mosque operations through intelligent automation. This solution integrates environmental controls, scheduling systems, and monitoring tools, delivering enhanced operational efficiency and improved worshipper experience.",
+    icon: IconBuildingMosque,
+  },
+  {
+    title: "Datacenter Temperature and Humidity Monitoring System",
+    description:
+      "An enterprise-grade solution designed for datacenters to monitor and manage environmental conditions in real time. It features integrated mobile and web applications for remote alerts and control, including power management, ensuring system integrity and uptime.",
+    icon: IconServer,
+  },
+  {
+    title: "Home, Building, and Hotel Automation Solutions",
+    description:
+      "End-to-end automation systems for residential, commercial, and hospitality facilities. These scalable solutions provide intelligent control of lighting, HVAC, security, and energy management systems to improve operational efficiency and user comfort.",
+    icon: IconHome,
+  },
+  {
+    title: "Wireless Network Solutions",
+    description:
+      "Tailored wireless infrastructure solutions engineered for high-performance connectivity. Designed for enterprises and institutions, these systems ensure seamless, secure, and scalable network access across large or complex environments.",
+    icon: IconWifi,
+  },
+  {
+    title: "Integrated Technology Solutions",
+    description:
+      "Strategic integration of IoT, automation, and communication technologies into unified systems. Our solutions are built to enhance interoperability, reduce operational complexity, and support digital transformation goals across sectors.",
+    icon: IconPlug,
+  },
+];
+
+export const CLOUD_SOLUTIONS = [
+  {
+    title: "Cloud and Data Center Migration",
+    description:
+      "We design and execute mission-critical SAP landscape migrations with AI-driven capacity planning. Our migration for Georgia Pacific achieved zero downtime, optimizing performance across compute, storage, and network systems.",
+    icon: IconServer,
+  },
+  {
+    title: "S/4HANA Deployments",
+    description:
+      "Our S/4HANA implementations on GCP and Azure, like those for PetSmart and Avanos Medical, include readiness assessments and automated cloud scaling, ensuring robust performance and cost efficiency.",
+    icon: IconDatabase,
+  },
+  {
+    title: "High Availability & Disaster Recovery",
+    description:
+      "We provide HA/DR solutions with AI-powered predictive fail-over and automated orchestration. Our work with Dell and NTT DATA ensured uninterrupted operations with proactive incident prediction.",
+    icon: IconWifi,
+  },
+  {
+    title: "Cloud Optimization",
+    description:
+      "Our cloud solutions optimize resource allocation and performance. For example, our SAP BW on HANA migration for Scotts Miracle Co. enhanced data processing speeds by 25% through AI-driven archive/restore optimization.",
+    icon: IconPlug,
+  },
+];
+
+export const SOFTWARE_SOLUTIONS = [
+  {
+    title: "Custom Application Development",
+    description:
+      "We develop tailored iOS and Android applications with exceptional user experiences. Our Ghaseeli laundry app, built with React Native and Node.js, features real-time tracking and bilingual support, boosting customer retention by 18%.",
+    icon: IconCode,
+  },
+  {
+    title: "E-commerce Solutions",
+    description:
+      "Our e-commerce platforms, like the Aywan al Saaha rollout, integrate AI-driven recommendation systems, increasing cross-sells and upsells by 20% through personalized customer experiences.",
+    icon: IconShoppingCart,
+  },
+  {
+    title: "Mobile App Development",
+    description:
+      "Native and cross-platform mobile applications for iOS and Android. We build high-performance, user-friendly apps with features like push notifications, offline support, and secure authentication.",
+    icon: IconPhone,
+  },
+  {
+    title: "API Development & Integration",
+    description:
+      "We create robust and scalable APIs that connect your systems and enable seamless data exchange. Our integration solutions ensure your applications work together harmoniously.",
+    icon: IconApi,
+  },
+  {
+    title: "SAP Integrations",
+    description:
+      "We specialize in SAP integrations, including S/4HANA, ECC, and C4C. Our work with Cloud3Concepts on C4C-ERP integration streamlined data replication and API mappings, reducing process times by 15%.",
+    icon: IconServer,
+  },
+  {
+    title: "Automated Testing & Tuning",
+    description:
+      "Our automated testing solutions, like those for Amtrak's SAP ECC migration, use AI-based anomaly detection to ensure flawless business processes and performance optimization.",
+    icon: IconRobot,
+  },
+];
+
+export const DT_SOLUTIONS = [
+  {
+    title: "IoT and AI Integration",
+    description:
+      "We embed IoT and AI into infrastructure for scalable solutions. Our University of Hail data center project used AI-driven anomaly detection and predictive analytics, improving uptime by 25%.",
+    icon: IconCpu,
+  },
+  {
+    title: "Advanced Data Analytics",
+    description:
+      "Using tools like Power BI, Oracle Analytics Cloud, and AWS QuickSight, we transform data into actionable insights. Our dashboard for University of Prince Mugrin enhanced student performance tracking by 30%.",
+    icon: IconChartBar,
+  },
+  {
+    title: "IT Strategy & Consulting",
+    description:
+      "Our consulting services streamline operations and enhance cybersecurity. For Coca-Cola Refreshments, our AI-enabled root-cause analysis reduced system downtime by 20%.",
+    icon: IconBulb,
+  },
+  {
+    title: "Sustainable Growth",
+    description:
+      "We drive sustainable growth through personalized solutions. Our smart parking system for Madinah Development Authority reduced congestion by 15%, enhancing urban mobility.",
+    icon: IconLeaf,
+  },
+];
+
+export const AI_SOLUTIONS = [
+  {
+    title: "Generative AI",
+    description:
+      "Our generative AI solutions automate content creation and enhance capabilities like computer vision and object recognition. From automated marketing content to advanced visual analytics, we drive efficiencies across sectors. For example, our AI recommendation engine for Aywan al Saaha boosted e-commerce cross-sells by 20%.",
+    icon: IconRobot,
+  },
+  {
+    title: "Predictive Analytics",
+    description:
+      "We build machine learning models to forecast trends and automate decision-making. Our work with Basic Chemical Industries used vibration data analysis to predict equipment downtime, reducing failures by 30%. Real-time alerts and predictive maintenance ensure operational continuity.",
+    icon: IconChartLine,
+  },
+  {
+    title: "AI-Driven Insights",
+    description:
+      "Our AI-driven anomaly detection and clustering solutions provide real-time insights. For the University of Prince Mugrin, we developed a student performance dashboard that identified underperforming segments, improving academic outcomes through targeted interventions.",
+    icon: IconBrain,
+  },
+  {
+    title: "Custom AI Integrations",
+    description:
+      "We integrate AI into existing systems for scalable solutions. Our smart parking system for Madinah Development Authority used AI and generative AI for demand forecasting and dynamic routing, reducing urban congestion by 15%.",
+    icon: IconSettingsAutomation,
+  },
 ];
 
 export const ITEMS_PER_PAGE = 10;

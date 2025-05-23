@@ -1,5 +1,5 @@
 import Footer from "@/components/layout/footer";
-import { NavbarComponent } from "@/components/layout/navbar";
+import { Navbar } from "@/components/layout/navbar";
 import { Hero } from "@/components/sections/hero";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} antialiased`}>
-        <NavbarComponent />
+        <Navbar />
         <Hero />
         {children}
         <Footer />
