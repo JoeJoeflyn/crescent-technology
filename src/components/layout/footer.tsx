@@ -24,8 +24,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-10">
-            <ul>
-              <li className="text-2xl pb-2 text-cyan-blue font-semibold">
+            <ul className="flex flex-col gap-4">
+              <li className="text-2xl text-cyan-blue font-semibold">
                 SITEMAP
               </li>
               {NAV_ITEMS.map((link, index) => (
@@ -34,7 +34,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <ul>
+            <ul className="flex flex-col gap-4">
               <li className="text-2xl pb-2 text-cyan-blue font-semibold">
                 SOCIAL
               </li>
@@ -58,7 +58,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Crescent Technology. All Rights
             Reserved.
           </span>
-          <Link href="#" className="font-semibold">
+          <Link href="/privacy" className="font-semibold">
             Privacy Policy
           </Link>
         </div>

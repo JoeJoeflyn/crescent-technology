@@ -122,14 +122,14 @@ export function Navbar() {
         )}
       >
         <div className="w-full">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8">
             {NAV_ITEMS.map((item, idx) => (
               <Link
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
                 className={cn(
-                  "text-white text-2xl md:text-6xl font-medium font-serif mb-4 transition-all duration-500 ease-out block",
+                  "text-white text-2xl md:text-4xl font-medium font-serif transition-all duration-500 ease-out block",
                   isMenuOpen ? "translate-x-0" : "translate-x-80"
                 )}
                 style={{

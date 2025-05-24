@@ -1,6 +1,8 @@
 "use client";
 import Counter from "@/components/animations/counter";
+import { IconDownload } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -11,9 +13,9 @@ export default function About() {
         </h1>
         <p className="text-lg text-primary">
           Founded in 2006, Crescent Technology started as an IT consulting
-          company in Atlanta. Over the past 15+ years, we have expanded our
-          services and geographical footprint, now serving clients across the
-          Middle East and USA.
+          company in Atlanta, Georgia, USA. Over the past 15+ years, we have
+          expanded our services and geographical footprint, now serving clients
+          across the Middle East and USA.
         </p>
       </div>
 
@@ -55,11 +57,11 @@ export default function About() {
           Who We Are
         </h1>
         <p className="text-lg text-primary">
-          Crescent Technology is a digitaltransformation leader, founded in
-          Atlanta,Georgia in 2006. With a Headquarters in Atlanta, Georgia,
-          Riyadh, KSA, and USA.We are committed to deliveringinnovative
-          solutions that help businessesunlock new opportunities and
-          achievesustainable growth.
+          Crescent Technology is a digital transformation leader, founded in
+          Atlanta, Georgia, USA in 2006. With a Headquarters in Atlanta,
+          Georgia, USA. We are committed to deliveringinnovative solutions that
+          help businesses unlock new opportunities and achieve sustainable
+          growth.
         </p>
         <div className="flex flex-col gap-4">
           <p className="flex items-center gap-2 font-semibold">
@@ -69,13 +71,37 @@ export default function About() {
           </p>
           <p className="flex items-center gap-2 font-semibold">
             <Image src="/about-2.png" alt="" width={50} height={50} /> To
-            deliver exceptional service, personalized solutions, and ensure
+            maintain and grow our client base by providing exceptional service,
+            personalized solutions, and ensuring a seamless customer experience.
           </p>
         </div>
         <p className="text-primary text-lg">
           Our commitment to excellence has driven us to the forefront of digital
           transformation, helping businesses embrace the future with confidence.
         </p>
+
+        {/* PDF Download Buttons */}
+        <div className="pt-8 flex flex-col sm:flex-row gap-4">
+          {/* English Version */}
+          <Link
+            href="/company-profile-en.pdf"
+            download="Crescent-Technology-Profile-EN.pdf"
+            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200 flex-1 sm:flex-initial"
+          >
+            <IconDownload className="w-5 h-5 mr-2" />
+            English Profile (PDF)
+          </Link>
+
+          {/* Arabic Version */}
+          <Link
+            href="/company-profile-ar.pdf"
+            download="Crescent-Technology-Profile-AR.pdf"
+            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-blue hover:bg-cyan-blue/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-blue transition-colors duration-200 flex-1 sm:flex-initial"
+          >
+            <IconDownload className="w-5 h-5 mr-2 transform scale-x-[-1]" />
+            الملف التعريفي (PDF)
+          </Link>
+        </div>
       </div>
     </div>
   );

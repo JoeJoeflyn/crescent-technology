@@ -2,12 +2,8 @@ import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { Hero } from "@/components/sections/hero";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { montserrat } from "./fonts";
 import "./globals.css";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Crescent Technology",

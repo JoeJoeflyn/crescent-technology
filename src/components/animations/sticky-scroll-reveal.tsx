@@ -53,8 +53,7 @@ export function StickyScrollReveal(): React.JSX.Element {
               transition={{ duration: 0.8 }}
               className="text-2xl md:text-4xl px-8 font-medium text-right tracking-tight leading-[120%]"
             >
-              Experts in IoT, AI, analytics, and cloud-76+ clients over 15
-              years, with offices in the USA, KSA, and India.
+              Experts in IoT, AI, analytics, and cloud-76+ clients over 15 years, with offices in the USA, KSA, and India.
             </motion.h1>
           </div>
         </div>

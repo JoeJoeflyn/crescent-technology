@@ -34,7 +34,7 @@ export const NAV_ITEMS = [
     link: "/dt",
   },
   {
-    name: "Contact",
+    name: "Contact Us",
     link: "/contact",
   },
 ];
@@ -58,7 +58,7 @@ export const HERO_TITLE = [
 export const CARDS = [
   {
     bgColor: "bg-gray-800",
-    title: "AI/ IOT Custom Development",
+    title: "AI/IOT Custom Development",
     description:
       "Embedding machine learning, IoT, and automation into physical infrastructure, we enable digital transformation that is both scalable and locally relevant. Our team delivers custom-built systems with a focus on low-cost deployment, real-time analytics, and adaptive intelligence tailored to client needs.",
     image: "/IOT.png",
@@ -146,6 +146,12 @@ export const SECOND_SECTION_IMAGES = [
 ];
 
 export const CONTACT_INFO = [
+  {
+    title: "General Inquiries",
+    location: "Global",
+    email: "sales@crescentglob.com",
+    phone: "",
+  },
   {
     title: "Riyadh, KSA",
     location: "Riyadh, KSA",
