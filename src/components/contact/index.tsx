@@ -97,8 +97,8 @@ export function ContactComponent() {
   }, []);
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col items-center justify-center py-12 md:py-20 w-full">
+    <div className="mx-auto w-full max-w-7xl px-4 flex flex-col gap-10 py-12 md:py-20">
+      <div className="flex flex-col items-center justify-center pb-12 md:pb-20 w-full">
         <div className="w-full mb-8 md:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
             Contact Us

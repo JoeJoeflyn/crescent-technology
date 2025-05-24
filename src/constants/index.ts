@@ -147,39 +147,33 @@ export const SECOND_SECTION_IMAGES = [
 
 export const CONTACT_INFO = [
   {
-    title: "General Inquiries",
-    location: "Global",
-    email: "sales@crescentglob.com",
-    phone: "",
-  },
-  {
     title: "Riyadh, KSA",
     location: "Riyadh, KSA",
-    email: "info@crescentgcc.com",
+    email: "sales@crescentglob.com",
     phone: "+966−55−403−4637",
   },
   {
     title: "Madinah, KSA",
     location: "Madinah, KSA",
-    email: "info@crescentgcc.com",
+    email: "sales@crescentglob.com",
     phone: "+966−53−519−6390",
   },
   {
     title: "Hyderabad, India",
     location: "Hyderabad, India",
-    email: "info@crescentgcc.com",
+    email: "sales@crescentglob.com",
     phone: "+91−709−319−9861",
   },
   {
     title: "Atlanta, GA, USA",
     location: "Atlanta, GA, USA",
-    email: "info@crescentgcc.com",
+    email: "sales@crescentglob.com",
     phone: "+1 – 678−644−8172",
   },
   {
     title: "Dubai, UAE",
     location: "Dubai, UAE",
-    email: "info@crescentgcc.com",
+    email: "sales@crescentglob.com",
     phone: "+971−50−235−4931",
   },
 ];
