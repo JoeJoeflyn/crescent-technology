@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="py-20 mx-auto w-full max-w-7xl px-4">
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-8">
           Company History and Overview
         </h1>
         <p className="text-lg text-primary">
@@ -53,7 +53,7 @@ export default function About() {
       </div>
 
       <div className="space-y-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+        <h1 className="text-4xl md:text-5xl font-bold text-primary">
           Who We Are
         </h1>
         <p className="text-lg text-primary">
@@ -84,7 +84,7 @@ export default function About() {
         <div className="pt-8 flex flex-col sm:flex-row gap-4">
           {/* English Version */}
           <Link
-            href="/company-profile-en.pdf"
+            href="/company-profile-english-version.pdf"
             download="Crescent-Technology-Profile-EN.pdf"
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200 flex-1 sm:flex-initial"
           >
@@ -94,7 +94,7 @@ export default function About() {
 
           {/* Arabic Version */}
           <Link
-            href="/company-profile-ar.pdf"
+            href="/company-profile-arabic-version.pdf"
             download="Crescent-Technology-Profile-AR.pdf"
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-blue hover:bg-cyan-blue/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-blue transition-colors duration-200 flex-1 sm:flex-initial"
           >

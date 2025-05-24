@@ -1,6 +1,7 @@
 "use client";
 import { NAV_ITEMS } from "@/constants";
 import { cn } from "@/lib/utils";
+import { IconDownload } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -59,8 +60,28 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Burger Icon */}
-          <div>
+          <div className="flex items-center gap-4">
+            {/* Download Buttons - Desktop */}
+            <Link
+              href="/company-profile-english-version.pdf"
+              download="Crescent-Technology-Profile-EN.pdf"
+              className="flex items-center text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200 whitespace-nowrap"
+            >
+              <IconDownload className="w-4 h-4 mr-1 flex-shrink-0" />
+              <span className="hidden md:inline">English Profile</span>
+              <span className="md:hidden">EN PDF</span>
+            </Link>
+            <Link
+              href="/company-profile-arabic-version.pdf"
+              download="Crescent-Technology-Profile-AR.pdf"
+              className="flex items-center text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200 whitespace-nowrap"
+            >
+              <IconDownload className="w-4 h-4 mr-1 transform scale-x-[-1] flex-shrink-0" />
+              <span className="hidden md:inline">الملف التعريفي</span>
+              <span className="md:hidden">عربي PDF</span>
+            </Link>
+
+            {/* Burger Icon */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="focus:outline-none relative w-8 h-8 cursor-pointer text-white"
