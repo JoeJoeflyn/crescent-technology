@@ -555,8 +555,5 @@ export const PROJECTS = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/company/next-codez/" },
-  { name: "Twitter", href: "https://twitter.com/NextCodez" },
-  { name: "Instagram", href: "https://www.instagram.com/nextcodez/" },
-  { name: "Facebook", href: "https://www.facebook.com/nextcodezz" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/crescentgcc" },
 ];
