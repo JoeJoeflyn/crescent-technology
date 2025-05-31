@@ -55,93 +55,114 @@ export const HERO_TITLE = [
   },
 ];
 
+export const SERVICES = [
+  {
+    id: 1,
+    title: "AI/IOT Custom Development",
+    description: "Embedding machine learning, IoT, and automation into physical infrastructure, we enable digital transformation that is both scalable and locally relevant. Our team delivers custom-built systems with a focus on low-cost deployment, real-time analytics, and adaptive intelligence tailored to client needs.",
+    image: "/IOT.webp",
+    alt: "IOT",
+    reverse: false
+  },
+  {
+    id: 2,
+    title: "Artificial Intelligence - Generative AI",
+    description: "Enhance AI capabilities with solutions in computer vision, object recognition, and generative AI, automating content generation and driving efficiencies across industries.",
+    image: "/AI.webp",
+    alt: "AI",
+    reverse: true
+  },
+  {
+    id: 3,
+    title: "Data Analytics - Insights",
+    description: "Unlock the potential of your data with advanced analytics solutions. We integrate multiple data sources, transforming data into actionable insights using tools like Power BI, Oracle Analytics Cloud, and AWS Quick sight.",
+    image: "/Analytics.webp",
+    alt: "Analytics",
+    reverse: false
+  },
+  {
+    id: 4,
+    title: "IT Strategy & Consulting",
+    description: "Streamline your business operations with our specialized cybersecurity, IT, and business process consulting. We ensure a smooth transition that minimizes downtime and maximizes efficiency.",
+    image: "/consulting.webp",
+    alt: "consulting",
+    reverse: true
+  },
+  {
+    id: 5,
+    title: "Cloud Migration & Modernization",
+    description: "Specializing in AWS migration, we provide expert guidance through the complexities of moving applications, databases, and entire IT infrastructures to leading cloud platforms like AWS, Azure, GCP, and Oracle Cloud, ensuring smooth, secure, and scalable transitions.",
+    image: "/cloud.webp",
+    alt: "consulting",
+    reverse: false
+  },
+  {
+    id: 6,
+    title: "Machine Learning & Predictive Analytics",
+    description: "Explore machine learning and predictive analytics, leveraging your data to build models that forecast trends and automate decision-making processes.",
+    image: "/machine.webp",
+    alt: "machine",
+    reverse: true
+  },
+  {
+    id: 7,
+    title: "Custom Application & Mobile App Development",
+    description: "Delivering tailored software solutions, we focus on custom application and mobile app development for iOS and Android, ensuring superb user experience and performance.",
+    image: "/development.webp",
+    alt: "development",
+    reverse: false
+  }
+];
+
 export const CARDS = [
   {
     bgColor: "bg-gray-800",
     title: "AI/IOT Custom Development",
     description:
       "Embedding machine learning, IoT, and automation into physical infrastructure, we enable digital transformation that is both scalable and locally relevant. Our team delivers custom-built systems with a focus on low-cost deployment, real-time analytics, and adaptive intelligence tailored to client needs.",
-    image: "/IOT.png",
+    image: "/IOT.webp",
   },
   {
     bgColor: "bg-gray-900",
     title: "Artificial Intelligence - Generative AI",
     description:
       "Enhance AI capabilities with solutions in computer vision, object recognition, and generative AI, automating content generation and driving efficiencies across industries.",
-    image: "/AI.png",
+    image: "/AI.webp",
   },
   {
     bgColor: "bg-primary",
     title: "Data Analytics - Insights",
     description:
       "Unlock the potential of your data with advanced analytics solutions. We integrate multiple data sources, transforming data into actionable insights using tools like Power BI, Oracle Analytics Cloud, and AWS Quick sight.",
-    image: "/Analytics.png",
+    image: "/Analytics.webp",
   },
   {
     bgColor: "bg-slate-800",
     title: "IT Strategy & Consulting",
     description:
       "Streamline your business operations with our specialized cybersecurity, IT, and business process consulting. We ensure a smooth transition that minimizes downtime and maximizes efficiency.",
-    image: "/consulting.png",
+    image: "/consulting.webp",
   },
   {
     bgColor: "bg-blue-950",
     title: "Cloud Migration & Modernization",
     description:
       "Specializing in AWS migration, we provide expert guidance through the complexities of moving applications, databases, and entire IT infrastructures to leading cloud platforms like AWS, Azure, GCP, and Oracle Cloud, ensuring smooth, secure, and scalable transitions.",
-    image: "/cloud.png",
+    image: "/cloud.webp",
   },
   {
     bgColor: "bg-neutral-900",
     title: "Machine Learning & Predictive Analytics",
     description:
       "Explore machine learning and predictive analytics, leveraging your data to build models that forecast trends and automate decision-making processes.",
-    image: "/machine.png",
+    image: "/machine.webp",
   },
   {
     bgColor: "bg-gray-900",
     title: "Custom Application & Mobile App Development",
     description:
       "Delivering tailored software solutions, we focus on custom application and mobile app development for iOS and Android, ensuring superb user experience and performance.",
-    image: "/development.png",
-  },
-];
-
-export const FIRST_SECTION_IMAGES = [
-  {
-    id: 1,
-    src: "/tech-1.avif",
-  },
-  {
-    id: 2,
-    src: "/tech-2.jpg",
-  },
-  {
-    id: 3,
-    src: "/tech-3.jpg",
-  },
-  {
-    id: 4,
-    src: "/tech-4.avif",
-  },
-];
-
-export const SECOND_SECTION_IMAGES = [
-  {
-    id: 1,
-    src: "/tech-5.avif",
-  },
-  {
-    id: 2,
-    src: "/tech-6.webp",
-  },
-  {
-    id: 3,
-    src: "/tech-7.jpg",
-  },
-  {
-    id: 4,
-    src: "/tech-8.webp",
+    image: "/development.webp",
   },
 ];
 
@@ -178,16 +199,21 @@ export const CONTACT_INFO = [
   },
 ];
 
-export const LOGO = { DEFAULT: "/logo-2.png", TRANSPARENT: "/logo-1.jpg", BIG: "/logo-3.png", LOGO_4: "/logo-4.png" };
+export const LOGO = "/logo.webp";
+
+export const FLAGS = [
+  {src: "/usa.svg", alt: "USA Flag"},
+  {src: "/KSA.svg", alt: "KSA Flag"},
+];
 
 export const HERO_WORDS = "Your Trusted AI Partners";
 
 export const BRAND_LOGOS = [
-  "/BCI.jpeg",
-  "/target-arabia.jpeg",
-  "/University-of-Hail.png",
-  "/Al-Madinah.png",
-  "/Coca-Cola.png",
+  "/BCI.webp",
+  "/target-arabia.webp",
+  "/University-of-Hail.webp",
+  "/Al-Madinah.webp",
+  "/Coca-Cola.webp",
   "/hershey.webp",
   "/PetSmart.webp",
   "/NIH.webp",

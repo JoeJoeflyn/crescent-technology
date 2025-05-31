@@ -1,6 +1,6 @@
 import Footer from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/navbar";
-import { Hero } from "@/components/sections/hero";
+import Navbar from "@/components/layout/navbar";
+import Hero from "@/components/sections/hero";
 import type { Metadata } from "next";
 import { montserrat } from "./fonts";
 import "./globals.css";

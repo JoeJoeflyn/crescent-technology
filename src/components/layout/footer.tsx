@@ -1,5 +1,5 @@
 "use client";
-import { NAV_ITEMS, SOCIAL_LINKS } from "@/constants";
+import { FLAGS, NAV_ITEMS, SOCIAL_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
@@ -16,18 +16,23 @@ const Footer = () => {
         <div className="flex md:flex-row flex-col justify-between gap-4 w-full">
           <div>
             <h1 className="md:text-4xl text-2xl font-semibold">
-              Let&lsquo;s do great work together
+              Let&lsquo;s do great work, together
             </h1>
             <div className="flex flex-col gap-4 pt-4">
-              <Image src="/usa.svg" alt="logo" width={200} height={200} />
-              <Image src="/KSA.svg" alt="logo" width={200} height={200} />
+              {FLAGS.map((flag, index) => (
+                <Image
+                  key={index}
+                  src={flag.src}
+                  alt={flag.alt}
+                  width={200}
+                  height={200}
+                />
+              ))}
             </div>
           </div>
           <div className="flex gap-10">
             <ul className="flex flex-col gap-4">
-              <li className="text-2xl text-cyan-blue font-semibold">
-                SITEMAP
-              </li>
+              <li className="text-2xl text-cyan-blue font-semibold">SITEMAP</li>
               {NAV_ITEMS.map((link, index) => (
                 <li key={index} className="text-xl font-medium">
                   <Link href={link.link}>{link.name}</Link>

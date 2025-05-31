@@ -2,7 +2,6 @@
 import Counter from "@/components/animations/counter";
 import { IconDownload } from "@tabler/icons-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function About() {
   return (
@@ -70,7 +69,7 @@ export default function About() {
             across the Middle East
           </p>
           <p className="flex items-center gap-2 font-semibold">
-            <Image src="/about-2.png" alt="" width={50} height={50} /> To
+            <Image src="/about-2.webp" alt="" width={50} height={50} /> To
             maintain and grow our client base by providing exceptional service,
             personalized solutions, and ensuring a seamless customer experience.
           </p>
@@ -83,24 +82,24 @@ export default function About() {
         {/* PDF Download Buttons */}
         <div className="pt-8 flex flex-col sm:flex-row gap-4">
           {/* English Version */}
-          <Link
+          <a
             href="/company-profile-english-version.pdf"
             download="Crescent-Technology-Profile-EN.pdf"
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200 flex-1 sm:flex-initial"
           >
             <IconDownload className="w-5 h-5 mr-2" />
             English Profile (PDF)
-          </Link>
+          </a>
 
           {/* Arabic Version */}
-          <Link
+          <a
             href="/company-profile-arabic-version.pdf"
             download="Crescent-Technology-Profile-AR.pdf"
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-blue hover:bg-cyan-blue/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-blue transition-colors duration-200 flex-1 sm:flex-initial"
           >
             <IconDownload className="w-5 h-5 mr-2 transform scale-x-[-1]" />
             الملف التعريفي (PDF)
-          </Link>
+          </a>
         </div>
       </div>
     </div>

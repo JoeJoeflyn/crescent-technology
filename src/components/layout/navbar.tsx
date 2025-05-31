@@ -1,30 +1,26 @@
 "use client";
-import { NAV_ITEMS } from "@/constants";
+import { LOGO, NAV_ITEMS } from "@/constants";
 import { cn } from "@/lib/utils";
 import { IconDownload } from "@tabler/icons-react";
+import { useMotionValueEvent, useScroll } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export function Navbar() {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const { scrollY } = useScroll();
 
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 10);
+  });
   // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
-
-  // Handle scroll to toggle navbar background
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Handle body overflow when menu is open
   useEffect(() => {
@@ -39,7 +35,8 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-500",
-        isScrolled ? "shadow-md bg-primary" : "bg-transparent"
+        isScrolled ? "shadow-md bg-primary" : "bg-transparent",
+        !isScrolled && isMenuOpen && "bg-[#002240]"
       )}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,10 +45,11 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="/logo-4.png"
+                src={LOGO}
                 alt="Logo"
                 width={150}
                 height={150}
+                priority
                 className={cn(
                   "transition-transform duration-300 ease-in-out hover:opacity-80 transform",
                   isScrolled ? "scale-110" : "scale-130"
@@ -62,7 +60,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             {/* Download Buttons - Desktop */}
-            <Link
+            <a
               href="/company-profile-english-version.pdf"
               download="Crescent-Technology-Profile-EN.pdf"
               className="flex items-center text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200 whitespace-nowrap"
@@ -70,8 +68,8 @@ export function Navbar() {
               <IconDownload className="w-4 h-4 mr-1 flex-shrink-0" />
               <span className="hidden md:inline">English Profile</span>
               <span className="md:hidden">EN PDF</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/company-profile-arabic-version.pdf"
               download="Crescent-Technology-Profile-AR.pdf"
               className="flex items-center text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200 whitespace-nowrap"
@@ -79,7 +77,7 @@ export function Navbar() {
               <IconDownload className="w-4 h-4 mr-1 transform scale-x-[-1] flex-shrink-0" />
               <span className="hidden md:inline">الملف التعريفي</span>
               <span className="md:hidden">عربي PDF</span>
-            </Link>
+            </a>
 
             {/* Burger Icon */}
             <button
@@ -137,13 +135,13 @@ export function Navbar() {
       {/* Menu */}
       <div
         className={cn(
-          "fixed left-0 right-0 top-20 flex flex-col transform transition-transform duration-1000 ease-in-out z-40 min-h-[calc(100vh-5rem)] px-4 sm:px-6 lg:px-8",
+          "fixed left-0 right-0 top-20 flex flex-col transform transition-transform duration-1000 ease-in-out z-40 min-h-[calc(100vh-5rem)]",
           isMenuOpen ? "translate-x-0" : "translate-x-full",
           isScrolled ? "bg-primary" : "bg-[#002240]"
         )}
       >
         <div className="w-full">
-          <div className="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8">
+          <div className="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8 px-4 sm:px-6 xl:px-8">
             {NAV_ITEMS.map((item, idx) => (
               <Link
                 key={item.name}
